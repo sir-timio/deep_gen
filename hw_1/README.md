@@ -1,3 +1,4 @@
+# Ионов Тимур. HW1
 ## 1. Байесовский генератор стилей
 
 - 1_naive_bayes.ipynb
@@ -12,5 +13,5 @@
 
 Реализация архитектуры, цикла обучения, визуализации находится в тетрадке.
 
-Логи эксперимента:
+[Wandb](https://wandb.ai/t-ionov/deep_gen/runs/mnad2?workspace=user-t-ionov)
 ![title](../assets/mnad_wandb.jpg)
