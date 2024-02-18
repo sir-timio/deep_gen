@@ -1,4 +1,4 @@
-# Ионов Тимур. Лаба N2
+# Ионов Тимур. HW 2
 
 [Wandb](https://wandb.ai/t-ionov/deep_gen/runs/dcgan_tanh_lr_2)
 
