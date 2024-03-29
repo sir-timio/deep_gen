@@ -89,21 +89,14 @@
 
 ## 5. Face swap
 
-Arcface loss был интегрирован в пайплайн оптимизации для переноса личности с сохранением аттриьбутов.
-В итоге, поворот головы Джоли не передался на прямой взгляд Дикаприо и Стетхема, сохранился цвет кожи. Передались глаза, брови, грубы и т. п.
+Arcface loss был интегрирован в пайплайн оптимизации для переноса личности с сохранением аттриьбутов. Пришлось подбирать гиперпараметры, в итоге помогло достичь приемлимых результат за счет увеличение коэф. lpips
 
-<table>
+``` 
+  rec_weight = 0.5
+  lpips_weight = 5
+  arc_weight = 0.5
+```
 
-  <tr>
-    <td><img src="out/aligned/AJoly/2.jpg" alt="failed 1" style="width: 800px;"/></td>
-    <td><img src="out/aligned/LDCaprio/0.jpg" alt="failed 1" style="width: 800px;"/></td>
-    <td><img src="out/face_swap/AJoly_on_LDCaprio.jpg" alt="failed 1" style="width: 800px;"/></td>
-  </tr>
+Удалось перенести лицо, при этом оставить исходное положение головы и цвет кожи. Экспериментирование заняло много компьюта и времени, поэтому таблица 3х3.
 
-
-  <tr>
-    <td><img src="out/aligned/AJoly/2.jpg" alt="failed 1" style="width: 800px;"/></td>
-    <td><img src="out/aligned/Stethem/3.jpg" alt="failed 1" style="width: 800px;"/></td>
-    <td><img src="out/face_swap/Joly_on_Statham.jpg" alt="failed 1" style="width: 800px;"/></td>
-  </tr>
-</table>
+![img](out/face_swap/transitions.jpg)
